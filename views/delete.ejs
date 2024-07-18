@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkmark List</title>
+</head>
+<body>
+    <h1>Checkmark List</h1>
+    <form action="/delete_selected" method="POST">
+        <ul>
+            <% submissions.forEach((submission, index) => { %>
+                <li>
+                    <input type="checkbox" id="submission-<%= index %>" name="titles" value="<%= submission.title %>">
+                    <label for="submission-<%= index %>"><%= submission.title %></label>
+                </li>
+            <% }); %>
+        </ul>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="window.location.href='/'">Cancel</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Submission</title>
+</head>
+<body>
+    <h1>Edit Submission</h1>
+    <form action="/update" method="POST">
+        <input type="hidden" name="submissionIndex" value="<%= submissionIndex %>">
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="<%= submission.title %>" required>
+        </div>
+        <div>
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" required><%= submission.content %></textarea>
+        </div>
+        <button type="submit">Update</button>
+        <button type="button">Cancel</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+1. home page will have create, edit and delete buttons
+it will show all posts in a list (Done)
+
+2. create page will have a form which can be filled with title and content
+it will have a cancel and submit which will take to home (Done)
+
+3. edit page will choose one blog post, open it and edit it (how?) maybe separate link for all posts
+choose one blog from checklist, take to a form where the initial value is the title & content, then edit it
+and then submit/cancel
+
+4. delete will choose all posts from checklist and delete it
+
+delete is sending back object to be deleted. get the deleted index, and use splice to delete the particular object in 
+submissions
+then redirect to home

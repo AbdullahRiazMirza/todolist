@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Abdullah Riaz EJS Updated Home page -->
+   
+
+   
+    <form id="myForm" action="/create" method="post">
+    <button type="submit">Create</button>
+    </form>
+    <% if (submissions&&submissions.length>0) {%>
+    <ul> There are submissions
+        <% submissions.forEach(element => { %>
+            <li><%= element.title%> <%= element.content%></li>
+        <% }); %>
+    </ul>
+    <%} else {%>
+            <p>Else is working</p>
+     <% } %>
+    
+    <form id="edit" action="/list" method="get">
+        <button type="submit">Edit</button>
+    </form>
+    <form id="delete" action="/delete" method="post">
+        <button type="submit">Delete</button>
+    </form>
+
+   
+
+    
+   
+</body>
+</html>
